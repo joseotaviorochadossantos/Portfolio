@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const hamburger = document.querySelector('.hamburger');
@@ -214,3 +214,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1500);
     });
 });
+    
+const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade');
+    const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
+    botaoDeAcessibilidade.AddEventListener('click', function () {
+    botaoDeAcessibilidade.classList.toggle('rotacao-botao');
+    opcoesDeAcessibilidade.classList.toggle('apresenta-lista') })
+
+    const aumentaFonteBotao = document.getElementById('aumentar-fonte');
+    const diminuiFonteBotao = document.getElementById('diminuir-fonte');
+
+    let tamanhoAtualFonte = 1;
+
+    botaoDeAcessibilidade.addEventListener('click', () => {
+        if (opcoesDeAcessibilidade.style.display == 'block') {
+            opcoesDeAcessibilidade.style.display == 'none'
+        } else {
+            opcoesDeAcessibilidade.style.display == 'block'
+        };
+    });
+
+    aumentaFonteBotao.addEventListener('click', function () {
+        tamanhoAtualFonte += 0.1;
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`
+
+    })
+
+    diminuiFonteBotao.addEventListener('click', function () {
+        tamanhoAtualFonte -= 0.1;
+        document.body.style.fontSize = `${tamanhoAtualFonte}rem`
+
+    });

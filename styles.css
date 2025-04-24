@@ -1,7 +1,7 @@
 /* Base Styles */
 :root {
-    --primary-color: #4e54c8;
-    --secondary-color: #8f94fb;
+    --primary-color: #00d5ff;
+    --secondary-color: #000dff;
     --dark-color: #2a2d3e;
     --light-color: #f5f5f7;
     --text-color: #333;
@@ -584,4 +584,25 @@ footer {
     .contact-content {
         flex-direction: column;
     }
+}
+
+.menu-acessibilidade { 
+    margin: 10px;
+}
+
+.rotacao-botao { 
+    transform: rotate(-0deg); 
+    transform-origin: right center; 
+    width: 100%;
+}
+
+.opcoes-acessibilidade {
+    margin-top:1px; 
+    display: flex; 
+    flex-direction: column; 
+    display: none;
+    }
+
+    .opcoes-acessibilidade button {
+    margin-bottom: 1px;
 }
